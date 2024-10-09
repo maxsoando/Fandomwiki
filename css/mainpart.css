@@ -1,0 +1,116 @@
+.mainpart{
+	width: 85%;
+	height:1300px ;
+	background-color: white;
+	background-size: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	border-radius: 2% 2% 0 0;
+}
+.main_header{
+	height:18%;
+	width: 100%;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	
+}
+.weather_light button{
+	background-image: url("../img/太阳.png");
+	height: 30px;
+	border: none;
+	width: 30px;
+	background-color: rgba(255, 255, 255, 0);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	position: relative;
+	bottom: 15px;
+	right: 30px;
+	cursor: pointer;
+}
+.main_header p{
+	position: relative;
+	bottom: 16%;
+	left:2%;
+}
+.main-concent{
+	height: 82%;
+	width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+.main_left{
+	border-radius: 5%;
+	width: 70%;
+	height: 100%;
+	background-image: url("../img/Module-header-bg-transparent.png");
+	
+	background-repeat: no-repeat;
+	background-color: antiquewhite;
+	
+	position: relative;
+	left:2% ;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+.left_title{
+	width: 100%;
+	height: 5%;
+	background-color: #ffd700;
+		/*
+		background-image: url("../img/标题画面.webp");
+		background-repeat: no-repeat; 
+		background-size: 23%; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.left_title_border{
+	width: 98%;
+	height: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.Carousel{
+	width: 80%;
+	height: 45%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.Carousel{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+.infomation{
+	width: 100%;
+	height: 50%;
+}
+.main_right{
+	width: 25.5%;
+	height: 100%;
+	background-image: url("../img/Module-header-bg-transparent.png");
+	background-color: #f9ead6;
+	position: relative;
+	right: 30px;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	box-sizing: border-box;
+	border: 2px #830000 solid;
+}
+.main_right_concent{
+	width: 90%;
+	height: 95%;
+}

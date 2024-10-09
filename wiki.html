@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/wiki.css"/>
+	<link rel="stylesheet" href="css/img.css"/>
+	<link rel="stylesheet" href="css/p.css"/>
+	<link rel="stylesheet" href="css/button.css"/>
+	<link rel="stylesheet" href="css/mainpart.css"/>
+	<link rel="stylesheet" href="css/main_right.css"/>
+	<link rel="stylesheet" href="css/infomation.css"/>
+</head>
+
+
+<!-- 轮播图样式 -->
+<style>
+	.large_box{
+	    margin-bottom:10px;
+	    width:600px;
+	    height:350px;
+	    overflow:hidden;
+	}
+	.large_box img{
+	    display:block;
+	}
+	.small_box{
+	    width:600px;
+	    height:73px;
+	    overflow:hidden;
+	}
+	.small_list{
+	    position:relative;
+	    float:left;
+	    width:550px;
+	    height:73px;
+	    overflow:hidden;
+	}
+	.small_list ul{
+	    height:50px;
+	    overflow:hidden;
+	}
+	.small_list ul li{
+	    position:relative;
+	    float:left;
+	    margin-right:10px;
+	    width:100px;
+	}
+	.small_list ul li img{
+	    display:block;
+	}
+	.small_list ul li .bun_bg{
+	    display:none;
+	    position:absolute;
+	    top:0;
+	    left:0;
+	    width:100px;
+	    height:50px;
+	    background:#FFF;
+	    filter:alpha(opacity=60);
+	    -moz-opacity:0.6;
+	    -khtml-opacity:0.6;
+	    opacity:0.6;
+	}
+	.small_list ul li.on .bun_bg{
+	    display:block;
+	}
+	.btns{
+	    display:block;
+	    width:20px;
+	    height:50px;
+	    background-color:burlywood;
+	    background-repeat:no-repeat;
+	    background-position:center center;
+	    cursor:pointer;
+	}
+	.btns:hover{
+	    background-color:#333;
+	}
+	.lefts_btn{
+	    float:left;
+	    margin-right:10px;
+	    background-image:url("img/左箭头.png");
+	}
+	.rights_btn{
+	    float:right;
+	    background-image:url("img/右箭头.png");
+	}
+</style>
+
+
+
+<body>
+	<!-- 侧边导航栏 -->
+    <div class="left">
+		<div class="left1">
+			<img src="img/fandom_true.png" alt="fandom" />
+			<button class="button3"></button>
+			<p>搜索</p>
+			<button class="button4"></button>
+			<p>游戏</p>
+			<button class="button5"></button>
+			<p>消息</p>
+			<button class="button6"></button>
+			<p>主页</p>
+			<button class="button7"></button>
+			<p>手机</p>
+		</div>
+		
+		<button class="button8"></button>
+	</div>
+	
+	
+	
+    <div class="main-container">
+		
+		<!--隐藏的导航栏  -->
+        <div class="hide-head">
+			<img src="img/little-titleshow.png" alt="航海王logo" height="44.5px"/>
+			<div class="hide-head-leader">
+				<p>航海王wiki</p>
+				<a href="#" style="font-size: 15px;">探索</a>
+				<a href="#" style="font-size: 15px;">世界观</a>
+				<a href="#" style="font-size: 15px;">媒体资讯</a>
+				<a href="#" style="font-size: 15px;">社区</a>
+			</div>
+			<div class="discuss"><button value="讨论板"></button></div>
+			<div class="discuss_tip">讨论板</div>
+		
+		</div>
+		
+		<!-- 正导航栏 -->
+        <div class="head">
+			<div class="login">
+				<div class="login_1">
+					<button class="button1" onclick='location.href = ("http://127.0.0.1:8848/JS%E4%BD%9C%E4%B8%9A/%E8%88%AA%E6%B5%B7%E7%8E%8Bwiki/login.html")'>登录</button>
+					<button class="button2" onclick='location.href = ("http://127.0.0.1:8848/JS%E4%BD%9C%E4%B8%9A/%E8%88%AA%E6%B5%B7%E7%8E%8Bwiki/register.html")'>注册</button>
+				</div>
+			</div>
+			<div class="leader">
+				<img class="img1" onclick="javascript:location.reload();" src="img/标题画面.webp" alt="" height="65px" width="250px"/>
+				<p class="p1" style="font-size: 27px; font-weight: bold;">航海王wiki</p>
+				<div class="select1">
+					<a style="font-size: 15px;">探索</a>
+					<a style="font-size: 15px;">世界观</a>
+					<a style="font-size: 15px;">媒体资讯</a>
+					<a style="font-size: 15px;">社区</a>
+				</div>
+				<div class="anniver">
+					<p>海贼王系列作品已连载:</p>
+					<p id="anniversary"></p>
+				</div>
+			</div>
+		</div>
+		
+		
+        <div class="mainpart">
+			<!-- mainpart外banner -->
+			<div class="main_header">
+				<p style="font-size: 35px;font-weight: 150;">首页</p>
+				<div class="weather_light">
+					<button class="light_button"></button>
+				</div>
+			</div>
+			
+			<div class="main-concent">
+				<div class="main_left">
+					
+					<div class="left_title">
+						<!-- 轮播上内banner -->
+						<div style="border: 1px #830000 solid; border-radius: 1%;" class="left_title_border">
+							<p style="color: #830000;">欢迎来到航海王wiki !</p>
+						</div>
+					</div>
+					
+					<!-- 轮播 -->
+					<div class="Carousel">
+						<div class="large_box">
+						    <ul>
+						        <li>
+						            <img src="img/R1.jpg" width="600" height="350">
+						        </li>
+						        <li>
+						            <img src="img/R2.jpg" width="600" height="350">
+						        </li>
+						        <li>
+						            <img src="img/R3.png" width="600" height="350">
+						        </li>
+						        <li>
+						            <img src="img/R4.jpg" width="600" height="350">
+						        </li>
+						        <li>
+						            <img src="img/R5.jpg" width="600" height="350">
+						        </li>
+						        <li>
+						            <img src="img/R6.jpg" width="600" height="350">
+						        </li>
+						    </ul>
+						</div>
+						<div class="small_box">
+						    <span class="btns lefts_btn" onclick="left_btn()"></span>
+						    <div class="small_list">
+						        <ul>
+						            <li class="on">
+						                <img src="img/R1.jpg" width="100" height="50">
+						                <div class="bun_bg"></div>
+						            </li>
+						            <li class="">
+						                <img src="img/R2.jpg" width="100" height="50">
+						                <div class="bun_bg"></div>
+						            </li>
+						            <li class="">
+						                <img src="img/R3.png" width="100" height="50">
+						                <div class="bun_bg"></div>
+						            </li>
+						            <li class="">
+						                <img src="img/R4.jpg" width="100" height="50">
+						                <div class="bun_bg"></div>
+						            </li>
+						            <li class="">
+						                <img src="img/R5.jpg" width="100" height="50">
+						                <div class="bun_bg"></div>
+						            </li>
+						            <li class="">
+						                <img src="img/R6.jpg" width="100" height="50">
+						                <div class="bun_bg"></div>
+						            </li>
+						        </ul>
+						    </div>
+						    <span class="btns rights_btn" onclick="right_btn()"></span>
+						</div>
+					</div>
+				
+					
+					<!-- 资讯页 -->
+					<div class="infomation">
+						
+						
+						<div class="On_this_day">
+							<div class="On_this_day_img"></div>
+							<div class="On_this_day_body">
+								<div class="On_this_day_1">
+									<p id="time_now">time</p>
+								</div>
+								<div class="On_this_day_2">
+									<img src="img/birthday.webp" alt="" />
+									<p>生日快乐,<a>皮克鲁斯</a>!</p>
+								</div>
+								<div class="On_this_day_2">
+									<img src="img/birthday.webp"/>
+									<p>生日快乐,<a>马温布汀</a>!</p>
+								</div>
+								<div class="On_this_day_3">
+									<ul>
+										<li class="on_li_1">2005:</li>
+										<li class="on_li_2">"The Screaming Speed Serve! Pirate Dodgeball!"首播.</li>
+										<li class="on_li_2">"Final Match on the Edge! Dharma has Fallen!"首播.</li>
+									</ul>
+									<ul>
+										<li class="on_li_1">2011:</li> 
+										<li class="on_li_3">482集 "The Power that Burns Even Fire - Akainu's Ruthless Pursuit"首播。</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="Latest_blog_posts">
+							<div class="Latest_blog_posts_1"></div>
+							<div class="Latest_blog_posts_2">
+								<button></button>
+								<a>愛雨思先生</a>
+								<p>• 2023年9月18日 (星期一)</p>
+							</div>
+							<div class="Latest_blog_posts_3">
+								<p>回顧和之國</p>
+							</div>
+							<div class="Latest_blog_posts_4">
+								<p>
+									我曾经在和之国篇连载时写了几篇文章。其中有两篇我最为在乎：黑炭家与和之国的出海策。“黑炭家”在讨论作者会如何处理黑炭家遗族、“和之国的出海策”在探讨为什么和之国会与外面的世界有所接触。
+								</p>
+								<p>最近看了105卷的SBS，正好有说到这两件事。</p>
+							</div>
+							<div class="Latest_blog_posts_5">
+								<a>阅读全文</a>
+							</div>
+						</div>
+					</div>
+					
+				
+					
+					<!-- 漫画,动画更新发行信息 -->
+				</div>
+				<!-- main_right -->
+				<div class="main_right">
+					
+					<div class="main_right_concent">
+						
+						
+						<div class="update_information">
+							<div class="update_information_first_title"></div>
+							<div class="update_information_second_title">
+								<p>漫画</p>
+							</div>
+							<div class="update_infomation_caricature">
+								<p style="color:#006cb3 ;font-size: 15px;font-weight: bold;"> 1103话</p>
+								<p style="font-size: 14px;">
+									看完一切的波妮走向贝卡帕库，忏悔自己毁了约。不过，父亲还是给她一份信物：就是漂亮的宝石。两人在谈完鲁夫后，贝卡帕库也道歉自己无法尽心尽力。
+								</p>
+								<a style="font-size: 14px;font-weight: 200px;">阅读更多....</a>
+							</div>
+							<div class="update_information_fourth_title">
+								<p>动画</p>
+							</div>
+							<div class="update_infomation_caricature">
+								<p style="color:#006cb3 ;font-size: 15px;font-weight: bold;"> 1088集</p>
+								<p style="font-size: 14px;">
+									鲁夫向他的船员们说出了他梦想的终点，甚至比成为海贼王还要伟大。
+								</p>
+								<a style="font-size: 14px;font-weight: 200px;">阅读更多....</a>
+							</div>
+						</div>
+						
+						
+						<div class="middle_infomation">
+							<div class="middle_infomation_1"></div>
+							
+							<div class="middle_infomation_2">
+								<div class="toggle1">漫画</div>
+								<div class="toggle2">DVD</div>
+							</div>
+							
+							<div class="middle_infomation_3">
+								
+								<div class="page1">
+									<div>
+										<p>日本 — 2023年11月2日发售</p>
+									</div>
+									<div class="picture_1">
+										
+									</div>
+									<div>
+										<p>107卷 — 伝说の英雄</p>
+									</div>
+								</div>
+								
+								<div class="page2">
+									<div class="page2_1">
+										<p>日本 — 2023年11月1日发行</p>
+									</div>
+									<div class="picture_2">
+										
+									</div>
+									<div class="page2_1">
+										<p>DVD Season 20 Piece 47</p>
+									</div>
+								</div>
+								
+							</div>
+								
+						</div>
+						
+						
+						<div class="foot_infomation"> 
+							<div class="foot_infomation_1">
+								
+							</div>
+							<div class="foot_infomation_2">
+								<p>你知道谁是鲁夫的爷爷吗? *你知道前进梅利号受过维京式葬礼吗？ *你知道卡塔克利的悬赏金是多少吗?!</p>
+								<br />
+								<p>欲投稿你知道吗，请前往讨论页提出，或翻译已有的句子.</p>
+							</div>
+							<div class="foot_infomation_3"></div>
+								<div class="foot_infomation_4">
+									<div class="ul">
+										<div><p>漫画</p></div>
+										<div><p>动画</p></div>
+										<div><p>故事</p></div>
+									</div>
+									<div class="ul">
+										<div><p>角色</p></div>
+										<div><p>海贼</p></div>
+										<div><p>海军</p></div>
+									</div>
+									<div class="ul">
+										<div><p>物品</p></div>
+										<div><p>场所</p></div>
+										<div><p>SBS</p></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+</body>
+
+
+
+
+<!-- script -->
+<script src="jquery-3.7.1.js"></script>
+
+<!-- 关灯效果 -->
+<script>
+	$(document).ready(function(){
+		var colors = ['white','#1b3335'];
+		var idx = 0;
+		$(".light_button").click(function(){
+			$(".mainpart").css("background-color",colors[idx]);
+			idx++;
+			if(idx == colors.length){
+				idx = 0;
+			}
+		});
+		var colors2 = ['white','#1e0c1b'];
+		var idx1 = 0;
+		$(".light_button").click(function(){
+			$(".left").css("background-color",colors2[idx1]);
+			$(".left1").css("background-color",colors2[idx1]);
+			idx1++;
+			if(idx1 == colors2.length){
+				idx1 = 0;
+			}
+		});
+		var colors3 = ['black','#ffc500'];
+		var idx2 = 0;
+		$(".light_button").click(function(){
+			$(".left1 p").css("color",colors3[idx2])
+			idx2++;
+			if(idx2 == colors3.length){
+				idx2 = 0;
+			}
+		});
+		var colors4 = ['black','white'];
+		var idx3 = 0;
+		$(".light_button").click(function(){
+			$(".left1 p").css("color",colors4[idx3])
+			idx3++;
+			if(idx3 == colors4.length){
+				idx3 = 0;
+			}
+		});
+		
+	});
+</script>
+<!-- 连载正计时 -->
+<script>
+	function timingTime(){
+	      let start = '1997-7-22 00:00:00'
+	      let startTime = new Date(start).getTime()
+	      let currentTime = new Date().getTime()
+	      let difference = currentTime - startTime
+	      let m =  Math.floor(difference / (1000))
+	      let mm = m % 60  // 秒
+	      let f = Math.floor(m / 60)
+	      let ff = f % 60 // 分钟
+	      let s = Math.floor(f/ 60) // 小时
+	      let ss = s % 24
+	      let day = Math.floor(s  / 24 ) // 天数
+	      return day + "天" + ss + "时" + ff + "分" + mm +'秒'
+	    }
+	    setInterval(()=>{
+	      document.getElementById('anniversary').innerHTML = timingTime()
+	    },1000)
+</script>
+<!-- 日期获取 -->
+<script>
+	var myDate = new Date();
+	var mytime = myDate.getFullYear()+"年"+myDate.getMonth()+1+"月"+myDate.getDate()+"日"
+	document.getElementById("time_now").innerHTML = mytime;
+</script>
+
+<script src="js/just_javascript.js"></script>
+<!--上方导航栏 垂直滚动距离监听 -->
+<script>
+    $(function() {
+    $(window).scroll(function() {
+     //获取垂直滚动的距离
+    var scrollTop = $(document).scrollTop();
+	console.log(scrollTop);
+    if (scrollTop >= 200) {
+      $(".hide-head").css({"top":"0","position":"fixed"});
+	  $(".hide-head").slideDown();
+    }else{
+		$(".hide-head").slideUp();
+	}
+       });
+     });
+</script>
+<!-- 讨论版触摸弹出提示框 -->
+<script>
+	$(function(){
+		$(".discuss").mouseenter(function(){
+			$(".discuss_tip").show()
+		});
+		$(".discuss").mouseleave(function(){
+			$(".discuss_tip").hide()
+		});
+	});
+</script>
+<!-- 轮播 -->
+<script type="text/javascript">
+	/* 左按钮 */
+	function left_btn(){
+	    var i;
+	    var l = $(".small_list").find("ul li").length;
+	    $(".small_list").find("ul li").each(function(index){
+	        if($(this).hasClass("on")){
+	            i = index;
+	        }
+	    });
+	    i--;
+	    if(i < 0){
+	        i = l - 1;
+	    }
+	    t = i;
+	    Img(i)
+	};
+	
+	/* 右按钮 */
+	function right_btn(){
+	    var i;
+	    var l = $(".small_list").find("ul li").length;
+	    $(".small_list").find("ul li").each(function(index){
+	        if($(this).hasClass("on")){
+	            i = index;
+	        }
+	    });
+	    i++;
+	    if(i > l-1){
+	        i = 0;
+	    }
+	    t = i;
+	    Img(i);
+	};
+	
+	/* 图片 */
+	function Img(i){
+	    var l = $(".small_list").find("ul li").length;
+	    var l_mean;
+	    if(l < 5){
+	        l_mean = 0;
+	    }else{
+	        l_mean = ((parseInt(l / 5) - 1) * 5) + (l % 5);
+	    }
+	    var w = 110;
+	    $(".large_box").find("ul li").eq(i).fadeIn().siblings().hide();
+	    $(".small_list").find("ul li").eq(i).addClass("on").siblings().removeClass("on");
+	    var ml = i * w;
+	    if(ml <= l_mean * w){
+	        $(".small_list").find("ul").stop().animate({
+	            marginLeft: -ml + "px"
+	        })
+	    }else{
+	        $(".small_list").find("ul").stop().animate({
+	            marginLeft: -(l_mean * w) + "px"
+	        })
+	    }
+	};
+	
+	
+</script>
+
+</html>

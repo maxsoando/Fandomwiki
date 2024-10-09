@@ -1,0 +1,228 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	background-color:#f5f3f5 ;
+}
+.login1{
+	width: 850px;
+	height: 600px;
+	position: relative;
+	top: 50px;
+	display: flex;
+	justify-content: space-between;
+}
+.back{
+	width: 9%;
+	height: 100%;
+	display: flex;
+	align-items: flex-start;
+	
+}
+.back_button{
+	width: 100%;
+	height: 5%;
+	background-image: url("../img/Snipaste_2024-01-10_14-30-54.png");
+	background-position:center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	cursor: pointer;
+}
+
+.right{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.right_1{
+	width: 100%;
+	height: 14%;
+	background-color: #280033;
+	display: flex;
+	align-items: center;
+}
+#right_1{
+	font-size: 32px;
+	color: white;
+	font-weight: bolder;
+	position: relative;
+	left: 41.5%;
+}
+#right_2{
+	color: white;
+	position: relative;
+	top: 32%;
+	font-size: 15px;
+	left: 24%;
+}
+.right_2{
+	width: 100%;
+	height: 10%;
+	background-image: url("../img/middle_login.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	
+}
+.right_3{
+	background-color: white;
+	width: 100%;
+	height: 76%;
+	display: flex;
+	flex-wrap: nowrap;
+	
+}
+.right_3_left{
+	width: 50%;
+	height: 100%;
+	
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+}
+.connect{
+	width: 100%;
+	height: 55%;
+	background-color: white;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.connect_1{
+	width: 80%;
+	height: 80%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items:flex-start;
+}
+.connect_1 p{
+	font-size: 15px;
+	font-weight: bold;
+}
+.connect_img_1{
+	width: 100%;
+	height: 18%;
+	border-radius: 2%;
+	background-image: url("../img/con1.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	cursor: pointer;
+}
+.connect_img_2{
+	width: 100%;
+	height: 18%;
+	border-radius: 2%;
+	background-image: url("../img/con2.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	cursor: pointer;
+}
+.connect_img_3{
+	width: 100%;
+	height: 18%;
+	border-radius: 2%;
+	background-image: url("../img/con3.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	cursor: pointer;
+}
+.connect_img_4{
+	width: 100%;
+	height: 18%;
+	border-radius: 2%;
+	background-image: url("../img/con4.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	cursor: pointer;
+}
+.right_3_right{
+	width: 50%;
+	height: 100%;
+}
+#r_inside_box{
+	width: 100%;
+	height: 65%;
+	position: relative;
+	top: 0px;
+}
+#r1{
+	width: 100%;
+	height: 20%;
+	display: flex;
+	align-items: center;
+}
+#r1 p{
+	position: relative;
+	left: 130px;
+	color: black;
+	font-weight: bold;
+	
+}
+#r2{
+	width: 100%;
+	height: 45%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+#r2 input{
+	width: 80%;
+	height: 30%;
+}
+#r3{
+	width: 100%;
+	height: 5%;
+	display: flex;
+	align-items: center;
+}
+#r3 a{
+	position: relative;
+	left: 300px;
+	cursor: pointer;
+}
+#r4{
+	width: 100%;
+	height: 30%;
+	display: flex;
+	flex-wrap: wrap;
+	
+}
+#r4 button{
+	cursor: pointer;
+	width: 60%;
+	height: 35%;
+	color: white;
+	font-size: 13px;
+	background-color: #a87fa1;
+	
+	position: relative;
+	left: 80px;
+	top: 15%;
+}
+#r4 p{
+	position: relative;
+	left: 16%;
+	font-size: 12px;
+	font-weight: 700;
+}
+#r4 a{
+	color: #520062;
+	cursor: pointer;
+}
